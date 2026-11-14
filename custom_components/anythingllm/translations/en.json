@@ -1,0 +1,72 @@
+{
+  "title": "AnythingLLM Conversation",
+  "config": {
+    "step": {
+      "user": {
+        "title": "AnythingLLM server",
+        "description": "Use a URL reachable from Home Assistant, without /api/docs.",
+        "data": {
+          "url": "Server URL",
+          "api_key": "AnythingLLM API key"
+        }
+      },
+      "reconfigure": {
+        "title": "AnythingLLM server",
+        "description": "Use a URL reachable from Home Assistant, without /api/docs.",
+        "data": {
+          "url": "Server URL",
+          "api_key": "AnythingLLM API key"
+        }
+      },
+      "workspace": {
+        "title": "Select workspace",
+        "description": "Thread endpoints are required. RAG and prompts remain configured in AnythingLLM.",
+        "data": {
+          "workspace": "Workspace"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Renew API key",
+        "data": {
+          "api_key": "New AnythingLLM API key"
+        }
+      }
+    },
+    "error": {
+      "invalid_url": "Invalid server URL.",
+      "invalid_auth": "API key rejected or access forbidden.",
+      "cannot_connect": "Cannot connect. Check networking and TLS.",
+      "timeout": "Request timed out; it may have been processed. Start a new conversation.",
+      "workspace_missing": "Workspace is missing or inaccessible. Reconfigure the integration.",
+      "not_found": "Endpoint or thread not found. Check /api/docs.",
+      "threads_required": "Thread endpoints are required. Global chat was not used.",
+      "rate_limited": "Rate limit reached. Try later.",
+      "server_error": "AnythingLLM server error.",
+      "invalid_response": "Malformed response or invalid JSON.",
+      "empty_response": "Empty response.",
+      "request_failed": "Request rejected or aborted.",
+      "busy": "A response is already in progress.",
+      "capacity": "Too many active conversations.",
+      "closed": "Integration is reloading.",
+      "agent_disabled": "@agent commands are not supported."
+    },
+    "abort": {
+      "reauth_successful": "Authentication updated.",
+      "reconfigure_successful": "Configuration updated.",
+      "already_configured": "Already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Conversation options",
+        "description": "Saving resets local conversation mappings. Query mode does not guarantee history. API Session fallback requires local /api/docs to document sessionId history partitioning. No automatic fallback.",
+        "data": {
+          "timeout": "Response timeout (seconds)",
+          "mode": "AnythingLLM mode",
+          "context_storage": "Context storage"
+        }
+      }
+    }
+  }
+}
