@@ -1,0 +1,10 @@
+# Environnement de test isolé, jamais installé dans Home Assistant par l’intégration.
+homeassistant==2025.3.4
+# Pin explicite : dépendance imposée par cette version historique de HA (retirée de PyPI).
+aiohttp==3.11.13
+pytest==9.2.0
+pytest-asyncio==1.5.0
+aioresponses==0.7.9
+ruff==0.17.5
+hassil==2.2.3
+home-assistant-intents==2025.3.5
